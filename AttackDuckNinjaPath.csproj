@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net4.8</TargetFramework>
+    <RootNamespace>AttackDuckNinjaPath</RootNamespace>
+    <Configurations>Debug;Release</Configurations>
+    <Nullable>enable</Nullable>
+    <AssemblyName>AttackDuckNinjaPath</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <Optimize>False</Optimize>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <Import Project="..\btd6.targets" />
+
+  <ItemGroup>
+    <Reference Include="PathsPlusPlus">
+      <HintPath>$(BloonsTD6)\Mods\PathsPlusPlus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
