@@ -25,11 +25,11 @@ namespace AttackDuckNinjaPath.Upgrades
 {
   class GhostWarriorLegion : UpgradePlusPlus<NinjaPath>
   {
-    public override int Cost => 48000;
+    public override int Cost => 45000;
     public override int Tier => 5;
     public override string Icon => VanillaSprites.GhostsUpgradeFxIcon;
 
-    public override string Description => "Shadow Clones now summon 3 at a time and last an additional round. ";
+    public override string Description => "Increased power on all attacks. Shadow Clones now summon 3 at a time and last an additional round.";
 
     public override void ApplyUpgrade(TowerModel towerModel)
     {
@@ -46,18 +46,18 @@ namespace AttackDuckNinjaPath.Upgrades
             case "AttackModel_Attack_":
               w.projectile.hasDamageModifiers = true;
               w.projectile.AddBehavior(new DamageModifierForTagModel(
-                "DamageModifierForTagModel_", "Ceramic, Moabs", 1.0f, 2.0f, false, false));
+                "DamageModifierForTagModel_", "Ceramic, Moabs", 1.0f, 1.0f, false, false));
               w.projectile.pierce += 8.0f;
               w.projectile.ApplyDisplay<Displays.Projectiles.GhostKunaiDisplay>();
               break;
             case "AttackModel_Caltrops_":
               w.projectile.hasDamageModifiers = true;
               w.projectile.AddBehavior(new DamageModifierForTagModel(
-                "DamageModifierForTagModel_","Ceramic, Moabs",1.0f,2.0f,false,false));
+                "DamageModifierForTagModel_", "Ceramic, Moabs", 1.0f, 1.0f, false, false));
               break;
             case "AttackModel_Attack Katana_":
               w.projectile.GetDamageModel().damage++;
-              w.projectile.GetBehavior<DamageModifierForTagModel>().damageAddative += 3.0f;
+              w.projectile.GetBehavior<DamageModifierForTagModel>().damageAddative += 2.0f;
               w.rate *= 0.667f;
               w.projectile.pierce += 8.0f;
               a.range -= 12.0f; // counteract IncreaseRange
@@ -102,7 +102,7 @@ namespace AttackDuckNinjaPath.Upgrades
       shadowTower.AddBehavior(new SavedSubTowerModel("SavedSubTowerModel_"));
       shadowTower.AddBehavior(new CreditPopsToParentTowerModel("CreditPopsToParentTowerModel_"));
       // Tower expire
-      shadowTower.AddBehavior(new TowerExpireModel("TowerExpireModel_", 99999f, 3, false, false));
+      shadowTower.AddBehavior(new TowerExpireModel("TowerExpireModel_", 180f, 3, false, false));
       shadowTower.name = "ShadowClone";
       shadowTower.displayScale = 0.8f;
 

@@ -30,7 +30,7 @@ namespace AttackDuckNinjaPath.Upgrades
     public override string Icon => VanillaSprites.TheLongArmofLightAA;
 
     public override string Description => "Increased stats and deadliness all-round. Sword attacks can now pop lead bloons." +
-      "\nFlash Step Ability upgrade: the ninja draws their blade with dazzling speed, stunning and ravaging all bloon types" +
+      "\nFlash Step ability upgrade: the ninja draws their blade with dazzling speed, stunning and ravaging all bloon types" +
       "as they teleport. Distraction upgrade increases stun effectiveness.";
 
     public override void ApplyUpgrade(TowerModel towerModel)
@@ -112,7 +112,7 @@ namespace AttackDuckNinjaPath.Upgrades
       shadowTower.AddBehavior(new SavedSubTowerModel("SavedSubTowerModel_"));
       shadowTower.AddBehavior(new CreditPopsToParentTowerModel("CreditPopsToParentTowerModel_"));
       // Tower expire
-      shadowTower.AddBehavior(new TowerExpireModel("TowerExpireModel_", 99999f, 2, false, false));
+      shadowTower.AddBehavior(new TowerExpireModel("TowerExpireModel_", 180f, 2, false, false));
       shadowTower.name = "ShadowClone";
       shadowTower.displayScale = 0.8f;
 

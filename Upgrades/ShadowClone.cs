@@ -110,7 +110,7 @@ namespace AttackDuckNinjaPath.Upgrades
       //shadowTower.tier = 0;
       //shadowTower.tiers = new int[] { 0, 0, 0 };
       //shadowTower.upgrades.Clear();
-      shadowTower.AddBehavior(new TowerExpireModel("TowerExpireModel_", 99999f, 2, false, false));
+      shadowTower.AddBehavior(new TowerExpireModel("TowerExpireModel_", 180f, 2, false, false));
       shadowTower.name = "ShadowClone";
       shadowTower.displayScale = 0.8f;
 

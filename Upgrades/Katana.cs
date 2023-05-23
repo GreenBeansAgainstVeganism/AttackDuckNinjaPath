@@ -55,6 +55,11 @@ namespace AttackDuckNinjaPath.Upgrades
         swordAttackModel.weapons[0].projectile.pierce += 6.0f;
         swordAttackModel.weapons[0].projectile.GetDescendant<DamageModifierForTagModel>().damageAddative += 4;
       }
+      if(towerModel.tiers[1] > 4 || towerModel.tiers[2] > 4)
+      {
+        swordAttackModel.GetDescendant<DamageModel>().damage += 9;
+        swordAttackModel.weapons[0].projectile.pierce += 4.0f;
+      }
       if(towerModel.tiers[1] > 0)
       {
         swordAttackModel.weapons[0].projectile.AddBehavior(towerModel.GetDescendant<WindModel>().Duplicate());
