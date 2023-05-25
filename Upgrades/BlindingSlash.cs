@@ -27,11 +27,10 @@ namespace AttackDuckNinjaPath.Upgrades
   {
     public override int Cost => 10500;
     public override int Tier => 4;
-    public override string Icon => VanillaSprites.TheLongArmofLightAA;
+    public override string Icon => GetTextureGUID(Name + "-Icon");
+    public override string Portrait => GetTextureGUID(Name + "-Portrait");
 
-    public override string Description => "Increased stats and deadliness all-round. Sword attacks can now pop lead bloons." +
-      "\nFlash Step ability upgrade: the ninja draws their blade with dazzling speed, stunning and ravaging all bloon types" +
-      "as they teleport. Distraction upgrade increases stun effectiveness.";
+    public override string Description => "Increased stats and deadliness all-round. Sword attacks can now pop lead bloons.\nFlash Step ability upgrade: the ninja draws their blade with dazzling speed and vigor, stunning and ravaging all bloon types in the near vicinity as they teleport. Distraction upgrade increases stun effectiveness.";
 
     public override void ApplyUpgrade(TowerModel towerModel)
     {
@@ -90,9 +89,10 @@ namespace AttackDuckNinjaPath.Upgrades
       stun.lifespanFrames = towerModel.tiers[1] > 0 ? 75 : 60;
       abilityAttack.weapons[0].projectile.AddBehavior(stun);
 
-      towerModel.GetAbilities().Find(a => a.name == "AbilityModel_FlashStepAbility").AddBehavior(new ActivateAttackModel(
-        "ActivateAttackModel_BlindingSlash", 0.4f, true,
+      var ability = towerModel.GetAbilities().Find(a => a.name == "AbilityModel_FlashStepAbility");
+        ability.AddBehavior(new ActivateAttackModel("ActivateAttackModel_BlindingSlash", 0.35f, true,
         new AttackModel[] { abilityAttack }, false, false, false, false, false));
+      ability.icon = GetSpriteReference(Name + "-Icon");
 
       // Reonstruct Shadow Clone tower model to match upgraded tower
       TowerModel shadowTower = towerModel.Duplicate();

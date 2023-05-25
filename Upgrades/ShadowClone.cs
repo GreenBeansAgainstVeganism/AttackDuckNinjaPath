@@ -26,10 +26,10 @@ namespace AttackDuckNinjaPath.Upgrades
   {
     public override int Cost => 2175;
     public override int Tier => 3;
-    public override string Icon => VanillaSprites.SkullAndCrossbonesEmoteIcon;
+    public override string Icon => GetTextureGUID(Name + "-Icon");
+    public override string Portrait => GetTextureGUID(Name + "-Portrait");
 
-    public override string Description => "Throws sharp kunai which have high pierce and can pop frozen bloons." +
-      "\nAbility: spawn a shadow clone nearby which has all the same attacks as the original and lasts for 2 rounds.";
+    public override string Description => "Throws sharp kunai which have high pierce and can pop frozen bloons.\nAbility: Uses an ancient art to spawn a shadow clone nearby which has all the same attacks as the original and lasts for 2 rounds.";
 
     public override void ApplyUpgrade(TowerModel towerModel)
     {
@@ -73,7 +73,8 @@ namespace AttackDuckNinjaPath.Upgrades
       ability.name = "AbilityModel_Shadow Clone_";
       ability.displayName = "Shadow Clone";
       ability.description = "Spawn a shadow clone nearby which has all the same attacks as the original and lasts for 2 rounds.";
-      ability.cooldownFrames = 2400;
+      ability.icon = GetSpriteReference(Name + "-Icon");
+      ability.cooldownFrames = 2700;
       
       //ability.icon = GetSpriteReference(VanillaSprites.AscendedShadowSeekingShuriken);
 

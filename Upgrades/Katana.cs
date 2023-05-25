@@ -19,7 +19,7 @@ namespace AttackDuckNinjaPath.Upgrades
   {
     public override int Cost => 450;
     public override int Tier => 1;
-    public override string Icon => VanillaSprites.SwordChargeAA;
+    public override string Icon => GetTextureGUID(Name+"-Icon");
 
     public override string Description => "Gives the ninja a secondary melee attack.";
 

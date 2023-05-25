@@ -25,11 +25,12 @@ namespace AttackDuckNinjaPath.Upgrades
 {
   class GhostWarriorLegion : UpgradePlusPlus<NinjaPath>
   {
-    public override int Cost => 45000;
+    public override int Cost => 48000;
     public override int Tier => 5;
-    public override string Icon => VanillaSprites.GhostsUpgradeFxIcon;
+    public override string Icon => GetTextureGUID(Name + "-Icon");
+    public override string Portrait => GetTextureGUID(Name + "-Portrait");
 
-    public override string Description => "Increased power on all attacks. Shadow Clones now summon 3 at a time and last an additional round.";
+    public override string Description => "Calls upon the vengeful spirits of past monkey warriors to assemble a shadow army. Shadow Clones now summon 3 at a time and linger for an additional round.";
 
     public override void ApplyUpgrade(TowerModel towerModel)
     {
@@ -77,8 +78,9 @@ namespace AttackDuckNinjaPath.Upgrades
       slashAttack.weapons[0].projectile.pierce += 100f;
       slashAttack.weapons[0].projectile.GetBehavior<SlowModel>().lifespanFrames = towerModel.tiers[1] < 0 ? 110 : 90;
 
-      var cloneAbilityBehavior = towerModel.GetAbilities()
-        .Find(a => a.name == "AbilityModel_Shadow Clone_").GetBehavior<ActivateAttackModel>();
+      var cloneAbility = towerModel.GetAbilities().Find(a => a.name == "AbilityModel_Shadow Clone_");
+      cloneAbility.icon = GetSpriteReference(Name + "-Icon");
+      var cloneAbilityBehavior = cloneAbility.GetBehavior<ActivateAttackModel>();
 
       cloneAbilityBehavior.lifespanFrames = 20;
       //cloneAbilityBehavior.processOnActivate = false;
