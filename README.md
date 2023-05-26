@@ -13,7 +13,7 @@ Below you'll find a list of upgrades, as well as some notes about balance and de
 
 <h2>Upgrade info:</h2>
 
-<img alt="Katana Icon" height="60" src="Upgrades/Katana-Icon.png">
+<img alt="Katana Icon" height="60" src="Katana-Badge.png">
 <h3>Tier 1: Katana</h3>
 
 <h4>Description:</h4>
@@ -24,7 +24,7 @@ Gives the ninja a secondary melee attack.
 
 Has the same stats as level 1 Sauda, but slower unless you get ninja discipline. I thought the Ninja deserved a sword attack now that melee towers exist in the game. The sword attack scales in power with some upgrades so that it remains relevant late game. Apart from this path's upgrades, the top path ninja upgrades give the sword bonus damage & pierce at tier 4 and bonus damage, pierce, attack rate, and ceramic/moab damage. It also benefits from distraction and counter-espionage, and gains a hefty damage boost with both of the other tier 5's.
 
-<img alt="Flash Step Icon" height="60" src="Upgrades/FlashStep-Icon.png">
+<img alt="Flash Step Icon" height="60" src="FlashStep-Badge.png">
 <h3>Tier 2: Flash Step</h3>
 
 <h4>Description</h4>
@@ -37,7 +37,7 @@ Also reduces the ninja's footprint size.
 
 Ninja's always felt very sedentary for a tower all about agility, so I gave them Super Monkey's Darkshift ability. It handles a bit differently though because it has a lightning fast cooldown in exchange for Ninja having a smaller range within which to teleport, and the fact that this upgrade gives little benefit outside of the ability. Flash step naturally synergizes with all the other paths, giving them much more maneuverability, (RIP Muddy Puddles) but to give even more synergy with middle path Ninja, it also decreases the tower footprint so you can pack shinobi ninjas much closer together. This does come at the price of more expensive crosspathing though, as well as missing out on bigger range from ninja discipline.
 
-<img alt="Shadow Clone Icon" height="60" src="Upgrades/ShadowClone-Icon.png">
+<img alt="Shadow Clone Icon" height="60" src="ShadowClone-Badge.png">
 <h3>Tier 3: Shadow Clone</h3>
 
 <h4>Description</h4>
@@ -50,7 +50,7 @@ Ability: Uses an ancient art to spawn a shadow clone nearby which has all the sa
 
 This upgrade is inspired by the ninja specialty building from BTD5 as well as the ability from BTDX. The bonus pierce is not huge but gives this tower an edge over just a base ninja. The shadow clone ability is unique from other subtower abilities like Summon Phoenix or Special Poperations because shadow clones last for a set number of rounds rather than a set duration. I made them this way because this upgrade's main appeal is being able to defend in two seperate locations at once, and that's kind of diminished if your shadow clone keeps despawning mid-round. The consequence, however, is that this creates a huge incentive to stall; the longer the rounds last, the more shadow clones you can have active at once. (They will expire after 3 minutes just so you can't stall infinitely for them.) So, if you're not leaning into stalling strats, this upgrade may feel a bit underpowered at first, especially in early game when the rounds are short. But, rest assured, later in the game, and with the right play style, it is a very cost-efficient defense.
 
-<img alt="Blinding Slash Icon" height="60" src="Upgrades/BlindingSlash-Icon.png">
+<img alt="Blinding Slash Icon" height="60" src="BlindingSlash-Badge.png">
 <h3>Tier 4: Blinding Slash</h3>
 
 <h4>Description</h4>
@@ -63,7 +63,7 @@ Flash Step ability upgrade: the ninja draws their blade with dazzling speed and 
 
 This upgrade builds upon the Flash Step ability and develops it into an offensive ability. It hits twice, once at the starting location and once at the destination, deals 5 damage to bloons, 15 to ceramics and a whopping 100 to blimps, so it can completely pop a moab if both hits connect. It also sports 100 pierce, not quite as much as other abilities, but well enough to cripple ceramic rushes. The ability itself is not crazy powerful, it's comparable to Sauda's Leaping Sword, but its real power comes from its super fast cooldown. Like Plasma Accelerator, it requires some micro, but this tower alone can nearly solo all of hard mode on easy maps, and it's stunning and moab damage carry well into late game, which is why it's so expensive for a tier 4. The slash attack can pop any bloon type so it's a decent DDT counter. It also includes some stat boosts to their regular attacks, which help keep the shadow clone ability relevant.
 
-<img alt="Ghost Warrior Legion Icon" height="60" src="Upgrades/GhostWarriorLegion-Icon.png">
+<img alt="Ghost Warrior Legion Icon" height="60" src="GhostWarriorLegion-Badge.png">
 <h3>Tier 5: Ghost Warrior Legion</h3>
 
 <h4>Description</h4>
