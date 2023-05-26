@@ -24,6 +24,9 @@ Gives the ninja a secondary melee attack.
 
 Has the same stats as level 1 Sauda, but slower unless you get ninja discipline. I thought the Ninja deserved a sword attack now that melee towers exist in the game. The sword attack scales in power with some upgrades so that it remains relevant late game. Apart from this path's upgrades, the top path ninja upgrades give the sword bonus damage & pierce at tier 4 and bonus damage, pierce, attack rate, and ceramic/moab damage. It also benefits from distraction and counter-espionage, and gains a hefty damage boost with both of the other tier 5's.
 
+<h4>Why can't I see the monkey's swords?</h4>
+Short answer is I'm lazy and my knowledge of modifying the tower's 3d models is very limited. Gimme a break and just imagine they are holding really cool-looking katanas and stuff. They're also ninjas so maybe they're just really good at hiding their weapons.
+
 <img align="right" alt="Flash Step Icon" height="120" src="FlashStep-Badge.png">
 <h3>Tier 2: Flash Step</h3>
 
