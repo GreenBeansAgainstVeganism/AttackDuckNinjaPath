@@ -16,6 +16,8 @@ Below you'll find a list of upgrades, as well as some notes about balance and de
 <img align="right" alt="Katana Icon" height="120" src="Katana-Badge.png">
 <h3>Tier 1: Katana</h3>
 
+$450
+
 <h4>Description:</h4>
 
 Gives the ninja a secondary melee attack.
@@ -30,6 +32,8 @@ Short answer is I'm lazy and my knowledge of modifying the tower's 3d models is 
 <img align="right" alt="Flash Step Icon" height="120" src="FlashStep-Badge.png">
 <h3>Tier 2: Flash Step</h3>
 
+$750
+
 <h4>Description</h4>
 
 Ability: Expert footwork allow the ninja to instantly zip to a nearby location.
@@ -42,6 +46,8 @@ Ninja's always felt very sedentary for a tower all about agility, so I gave them
 
 <img align="right" alt="Shadow Clone Icon" height="120" src="ShadowClone-Badge.png">
 <h3>Tier 3: Shadow Clone</h3>
+
+$2175
 
 <h4>Description</h4>
 
@@ -56,6 +62,8 @@ This upgrade is inspired by the ninja specialty building from BTD5 as well as th
 <img align="right" alt="Blinding Slash Icon" height="120" src="BlindingSlash-Badge.png">
 <h3>Tier 4: Blinding Slash</h3>
 
+$10500
+
 <h4>Description</h4>
 
 Increased stats and deadliness all-round. Sword attacks can now pop lead bloons.
@@ -68,6 +76,8 @@ This upgrade builds upon the Flash Step ability and develops it into an offensiv
 
 <img align="right" alt="Ghost Warrior Legion Icon" height="120" src="GhostWarriorLegion-Badge.png">
 <h3>Tier 5: Ghost Warrior Legion</h3>
+
+$48000
 
 <h4>Description</h4>
 
