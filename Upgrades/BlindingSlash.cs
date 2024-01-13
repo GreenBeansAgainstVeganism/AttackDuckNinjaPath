@@ -25,10 +25,11 @@ namespace AttackDuckNinjaPath.Upgrades
 {
   class BlindingSlash : UpgradePlusPlus<NinjaPath>
   {
-    public override int Cost => 10500;
+    public override int Cost => 12500;
     public override int Tier => 4;
     public override string Icon => GetTextureGUID(Name + "-Icon");
     public override string Portrait => GetTextureGUID(Name + "-Portrait");
+    public override bool Ability => true;
 
     public override string Description => "Increased stats and deadliness all-round. Sword attacks can now pop lead bloons.\nFlash Step ability upgrade: the ninja draws their blade with dazzling speed and vigor, stunning and ravaging all bloon types in the near vicinity as they teleport. Distraction upgrade increases stun effectiveness.";
 
@@ -48,13 +49,13 @@ namespace AttackDuckNinjaPath.Upgrades
             case "AttackModel_Caltrops_":
               w.projectile.GetDamageModel().damage++;
               w.rate *= 0.8f;
-              w.projectile.pierce += 9.0f;
+              w.projectile.pierce += 2.0f;
               break;
             case "AttackModel_Attack Katana_":
               w.projectile.GetDamageModel().immuneBloonProperties &= ~BloonProperties.Lead;
               w.projectile.GetDamageModel().damage++;
               w.rate *= 0.8f;
-              w.projectile.pierce += 11.0f;
+              w.projectile.pierce += 4.0f;
               a.range -= 8.0f; // counteract IncreaseRange
               break;
           }
@@ -68,7 +69,7 @@ namespace AttackDuckNinjaPath.Upgrades
       abilityAttack.weapons[0].fireWithoutTarget = true;
       abilityAttack.weapons[0].fireBetweenRounds = false;
       abilityAttack.weapons[0].projectile.radius = 30.0f;
-      abilityAttack.weapons[0].projectile.pierce = 100.0f;
+      abilityAttack.weapons[0].projectile.pierce = 50.0f;
       abilityAttack.weapons[0].projectile.SetHitCamo(true);
       abilityAttack.weapons[0].projectile.hasDamageModifiers = true;
       abilityAttack.weapons[0].projectile.GetDamageModel().immuneBloonProperties = BloonProperties.None;
@@ -79,14 +80,14 @@ namespace AttackDuckNinjaPath.Upgrades
       abilityAttack.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel(
         "DamageModifierForTagModel_BlindingSlash", "Ceramic", 1.0f, 10.0f, false, false));
       abilityAttack.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel(
-        "DamageModifierForTagModel_BlindingSlash", "Moabs", 1.0f, 95.0f, false, false));
+        "DamageModifierForTagModel_BlindingSlash", "Moabs", 1.0f, 55.0f, false, false));
       // Give slash attack decamo if counter-espionage is purchased
       if (towerModel.tiers[1] > 1)
       {
         abilityAttack.weapons[0].projectile.AddBehavior(towerModel.GetDescendant<RemoveBloonModifiersModel>().Duplicate());
       }
       SlowModel stun = Game.instance.model.GetTowerFromId("BombShooter-500").GetDescendant<SlowModel>().Duplicate();
-      stun.lifespanFrames = towerModel.tiers[1] > 0 ? 75 : 60;
+      stun.lifespanFrames = towerModel.tiers[1] > 0 ? 30 : 24;
       abilityAttack.weapons[0].projectile.AddBehavior(stun);
 
       var ability = towerModel.GetAbilities().Find(a => a.name == "AbilityModel_FlashStepAbility");

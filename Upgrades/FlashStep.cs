@@ -23,6 +23,8 @@ namespace AttackDuckNinjaPath.Upgrades
     public override int Tier => 2;
     public override string Icon => GetTextureGUID(Name + "-Icon");
 
+    public override bool Ability => true;
+
     public override string Description => "Ability: Expert footwork allow the ninja to instantly zip to a nearby location.\nAlso reduces the ninja's footprint size.";
 
     public override void ApplyUpgrade(TowerModel towerModel)

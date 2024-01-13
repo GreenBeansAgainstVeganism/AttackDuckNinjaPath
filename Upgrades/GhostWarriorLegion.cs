@@ -25,10 +25,11 @@ namespace AttackDuckNinjaPath.Upgrades
 {
   class GhostWarriorLegion : UpgradePlusPlus<NinjaPath>
   {
-    public override int Cost => 48000;
+    public override int Cost => 56000;
     public override int Tier => 5;
     public override string Icon => GetTextureGUID(Name + "-Icon");
     public override string Portrait => GetTextureGUID(Name + "-Portrait");
+    public override bool Ability => true;
 
     public override string Description => "Calls upon the vengeful spirits of past monkey warriors to assemble a shadow army. Shadow Clones now summon 3 at a time and linger for an additional round.";
 
@@ -45,22 +46,22 @@ namespace AttackDuckNinjaPath.Upgrades
           switch(a.name)
           {
             case "AttackModel_Attack_":
-              w.projectile.hasDamageModifiers = true;
+              /*w.projectile.hasDamageModifiers = true;
               w.projectile.AddBehavior(new DamageModifierForTagModel(
-                "DamageModifierForTagModel_", "Ceramic, Moabs", 1.0f, 1.0f, false, false));
-              w.projectile.pierce += 8.0f;
+                "DamageModifierForTagModel_", "Ceramic, Moabs", 1.0f, 1.0f, false, false));*/
+              w.projectile.pierce += 2.0f;
               w.projectile.ApplyDisplay<Displays.Projectiles.GhostKunaiDisplay>();
               break;
             case "AttackModel_Caltrops_":
-              w.projectile.hasDamageModifiers = true;
+              /*w.projectile.hasDamageModifiers = true;
               w.projectile.AddBehavior(new DamageModifierForTagModel(
-                "DamageModifierForTagModel_", "Ceramic, Moabs", 1.0f, 1.0f, false, false));
+                "DamageModifierForTagModel_", "Ceramic, Moabs", 1.0f, 1.0f, false, false));*/
               break;
             case "AttackModel_Attack Katana_":
               w.projectile.GetDamageModel().damage++;
               w.projectile.GetBehavior<DamageModifierForTagModel>().damageAddative += 2.0f;
-              w.rate *= 0.667f;
-              w.projectile.pierce += 8.0f;
+              w.rate *= 0.75f;
+              w.projectile.pierce += 4.0f;
               a.range -= 12.0f; // counteract IncreaseRange
               break;
           }
@@ -72,11 +73,11 @@ namespace AttackDuckNinjaPath.Upgrades
         .GetBehavior<ActivateAttackModel>().attacks[0];
 
       slashAttack.weapons[0].projectile.GetDamageModel().damage += 5f;
-      slashAttack.weapons[0].projectile.GetBehaviors<DamageModifierForTagModel>().Find(m => m.tag == "Moabs").damageAddative = 140f;
+      slashAttack.weapons[0].projectile.GetBehaviors<DamageModifierForTagModel>().Find(m => m.tag == "Moabs").damageAddative = 100f;
       slashAttack.weapons[0].projectile.GetBehaviors<DamageModifierForTagModel>().Find(m => m.tag == "Ceramic").damageAddative = 50f;
       slashAttack.weapons[0].projectile.radius -= 12f; // counteract IncreaseRange
-      slashAttack.weapons[0].projectile.pierce += 100f;
-      slashAttack.weapons[0].projectile.GetBehavior<SlowModel>().lifespanFrames = towerModel.tiers[1] < 0 ? 110 : 90;
+      slashAttack.weapons[0].projectile.pierce += 50f;
+      slashAttack.weapons[0].projectile.GetBehavior<SlowModel>().lifespanFrames = towerModel.tiers[1] < 0 ? 60 : 45;
 
       var cloneAbility = towerModel.GetAbilities().Find(a => a.name == "AbilityModel_Shadow Clone_");
       cloneAbility.icon = GetSpriteReference(Name + "-Icon");

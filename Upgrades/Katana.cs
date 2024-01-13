@@ -17,7 +17,7 @@ namespace AttackDuckNinjaPath.Upgrades
 {
   class Katana : UpgradePlusPlus<NinjaPath>
   {
-    public override int Cost => 450;
+    public override int Cost => 400;
     public override int Tier => 1;
     public override string Icon => GetTextureGUID(Name+"-Icon");
 
@@ -33,11 +33,12 @@ namespace AttackDuckNinjaPath.Upgrades
 
       //towerModel.behaviors.Append<AttackModel>(Game.instance.model.tow);
       AttackModel swordAttackModel = Game.instance.model.GetTowerFromId("Sauda").GetAttackModel().Duplicate();
-      swordAttackModel.weapons[0].rate = 0.5f;
+      swordAttackModel.weapons[0].rate = 0.65f;
+      swordAttackModel.weapons[0].projectile.pierce = 3.0f;
       swordAttackModel.name = "AttackModel_Attack Katana_";
       if(towerModel.tiers[0] > 0)
       {
-        swordAttackModel.weapons[0].rate *= 0.7f;
+        swordAttackModel.weapons[0].rate *= 0.75f;
       }
       if(towerModel.tiers[0] > 1)
       {
